@@ -1,0 +1,71 @@
+
+# Write a program that takes an array of spisok2 data and
+# displays only those elements from spisok_2 that are not in spisok_1.
+
+
+spisok_1 = ('Lamborgini', 17, '4456', 2020, 'Paris', 'USA', 11, 23)
+spisok_2 = ('Ferrari', 17, 4456, 2021, 'Paris', 'UK', 777, 23)
+a = set(spisok_1)
+b = set(spisok_2)
+p = a.difference(b)
+print(tuple(p))
+
+
+
+# Task 7:
+# 1. Ask the user for a sentence and divide it by spaces.
+# If the user entered less than six words, ask again,
+# Don't accept offers if it's shorter than 6 characters, ask again and again.
+# 2. Divide the resulting sheet into 2 equal parts (If the number of sheet elements is odd,
+# then the length of the first part should be one element longer)
+# 3. Rearrange these two parts and write them down on a sheet.
+
+ask = input('enter something:').split()
+qw = []
+while len(ask) < 6:
+    print('Try again')
+    ask = input('enter something:').split()
+    
+else:
+    b = len(list(ask)) // 2
+    df = len(ask[:b])
+    cf = len(ask[b:])
+
+    print(cf)
+    print(df)
+
+if df % 2 == 0 or cf % 2 == 0:
+    p = df + 2
+    g = cf
+    print(p)
+    print(g)
+
+    df = ask[:b]
+    cf = ask[b:]
+    df, cf = cf, df
+    print(df + cf)
+
+else:
+    print('check code')
+
+
+
+# Task 11:
+# Given a list of numbers:
+# numbers = [1,0,-2,4,3,6,6,3,5,8,4,2]
+# Print all elements of the list that are greater than the previous element
+# Example: (numbers: 1,5,2,4,3 Result: 5,4)
+
+
+numbers = [1,0,-2,4,3,6,6,3,5,8,4,2]
+b = len(list(numbers)) // 2
+sp1 = len(ask[:b])
+sp2 = len(ask[b:])
+numbers 
+
+
+# Task 12:
+# How many 3 are there in 175315354518498331
+
+zz = '175315354518498331'
+print(zz.count('3'))
