@@ -1,0 +1,89 @@
+
+
+# Task 16:
+# Write a program to merge multiple dictionaries into one.
+
+y_friends = {
+"Joomart": "+996555246810", 
+"Adinai": "+996555013579",
+"Ermek": "+996777013579",
+"Atai": "+996777246810",
+"Aslan": "+996999246810",}
+
+
+his_her_friends = {
+"Lyazat": "+996551123456",
+"Salavat": "+996552234567",
+"Daniyar": "+996553345678",
+"Bolot": "+996554456789",
+"Alymbek": "+996555501234",
+"Dastan": "+996556678912",
+"Maksat": "+996557789012",
+"Aibek": "+996558890123",
+}
+
+
+def sliyanie(y_friends, his_her_friends):
+    y_friends.update(his_her_friends)
+    return y_friends
+
+print(sliyanie(y_friends, his_her_friends))
+
+
+
+
+
+# Task 19:
+# "Write a function that accepts a dictionary where keys are numbers and country values.
+# Ask the user to enter a country or key and return the result."
+
+d = {}
+enter_key = input('Введите ключ:')
+
+if enter_key == '1':
+    d.update({
+        '1': 'kyrgyzstan'
+        })
+    print(d)
+elif enter_key == '2':
+    d.update({
+        '2': 'kazahstan'
+        })
+    print(d)
+elif enter_key == '3':
+    d.update({
+        '3': 'Russia',
+        })
+    print(d)
+elif enter_key == '4':
+    d.update({
+    '4': 'Uzbekistan'
+    })
+    print(d)
+
+
+
+# Task 18:
+# "An analogue of the Caesar cipher".
+# 1) The program must request the elements of the list separated by a space.
+# 2) After which the user must enter a value to shift the elements of the list.
+# The value can be either positive or negative. If the value is positive,
+# elements of the list should be shifted to the right, if negative - to the left. The result should be displayed on the screen:
+# Input: [5,7,9,10,2], 2
+# Result: [9,10,2,5,7]
+
+# Аналог шифра Цезаря
+#Это решение сфокусировано на меньшую переменную HELLO
+# а не основную большую d
+
+a = 'hello' 
+n = 2
+d = 'abcdefghijklmnoprstqvwxyz' #alphabet
+g =[]
+v = ''
+
+for i in a:
+    ind = d.find(i)+ n
+    rex = d[ind]       # [переменная] внесенная будет выдавать буквы Но в переменной должны быть индексы(циифры)
+    v += rex # таким образом добавляется в единый стринг
+print(v)
